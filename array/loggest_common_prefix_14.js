@@ -28,5 +28,3 @@ var longestCommonPrefix = function (strs) {
 
   return a[0].substring(0, i);
 };
-
-console.log(longestCommonPrefix(['geeksforgeeks', 'geeks', 'geek', 'geezer']));
