@@ -13,12 +13,11 @@ var romanToInt = function (s) {
     M: 1000,
   };
 
-  const str = s.split('');
-  let sum = dic[str[0]];
+  let sum = dic[s[0]];
 
-  for (let i = 1; i < str.length; i++) {
-    const cur = str[i];
-    const pre = str[i - 1];
+  for (let i = 1; i < s.length; i++) {
+    const cur = s[i];
+    const pre = s[i - 1];
     let amount = dic[cur];
 
     switch (cur) {
