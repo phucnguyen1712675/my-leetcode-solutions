@@ -4,20 +4,19 @@
  */
 var maxSubArray = function (nums) {
   let currSum = 0;
-	let maxSum = Number.NEGATIVE_INFINITY;
+  let maxSum = Number.NEGATIVE_INFINITY;
 
-	for (let i = 0; i < nums.length; i++) {
-		currSum += nums[i];
+  for (let i = 0; i < nums.length; i++) {
+    currSum += nums[i];
 
-		if (currSum > maxSum) {
-			maxSum = currSum;
-		}
+    if (maxSum < currSum) {
+      maxSum = currSum;
+    }
 
-		if (currSum < 0) {
-			currSum = 0;
-		}
-	}
+    if (currSum < 0) {
+      currSum = 0;
+    }
+  }
 
-	return maxSum;
+  return maxSum;
 };
- 
